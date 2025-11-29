@@ -1,9 +1,10 @@
 import math
+from abc import ABC, abstractmethod
 
-
-class Tvar:
+class Tvar(ABC):
+    @abstractmethod
     def obsah(self):
-        return 0
+        pass
 
 
 class Kruh(Tvar):
@@ -29,6 +30,9 @@ class Ctvrec(Obdenik):
         
 
 if __name__ == "__main__":
+    
+    #k = Kruh(5)
+    #print(k.obsah())
     tvary = [Kruh(3), Kruh(2), Obdenik(2, 5), Kruh(1), Ctvrec(5)]
     celkovy_obsah = 0
     for tvar in tvary:
