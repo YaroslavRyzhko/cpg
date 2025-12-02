@@ -15,9 +15,9 @@ def download_url_and_get_all_hrefs(url):
     if response.status_code != 200:
         return []
     
-    root = html.fromstring(response.content)
+    content = html.fromstring(response.content)
     hrefs = []
-    for href in root.xpath('//a/@href'):
+    for href in content.xpath('//a/@href'):
         if href.startswith('http'):
             hrefs.append(href)
 
