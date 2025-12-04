@@ -40,7 +40,7 @@ def je_tah_mozny_vez(cilova_pozice, aktualni_pozice, obsazene_pozice):
             return False
     return True
 
-def je_tah_mozny_strelec(cilova_pozice, aktualni_pozice, obsazene_pozice):
+def je_tah_mozny_strelec(cilova_pozice, aktualni_pozice, obsazene_pozice): 
     if abs(aktualni_pozice[0]- cilova_pozice[0]) != abs(aktualni_pozice[1]- cilova_pozice[1]):
         return False
     for i in range(1, abs(aktualni_pozice[0] - cilova_pozice[0]) ):
