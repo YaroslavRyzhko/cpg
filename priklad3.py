@@ -25,7 +25,7 @@ class Zamestnanec(ABC):
 class Programator(Zamestnanec):
     def vypocitej_mzdu(self):
         bonus = 1000 * self.pocet_odpracovanych_let
-        navic = (self.zakladni_mzda + bonus) * 0.1
+        navic = int((self.zakladni_mzda + bonus) * 0.1)
         bonus += navic
         return self.zakladni_mzda + bonus
     
