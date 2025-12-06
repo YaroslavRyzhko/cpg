@@ -29,8 +29,6 @@ class Programator(Zamestnanec):
         bonus += navic
         return self.zakladni_mzda + bonus
     
-    def __str__(self):
-        return f"Programator {self.jmeno}, odpracovanych let {self.pocet_odpracovanych_let}, zakladni mzda {self.zakladni_mzda} Kc"
 
 
 # Vytvorte tridu Manazer, ktera dedi od Zamestnanec
@@ -48,9 +46,6 @@ class Manazer(Zamestnanec):
         bonus += podrizeny_bonus
         return self.zakladni_mzda + bonus 
     
-    def __str__(self):
-        return f"Manazer {self.jmeno}, odpracovanych let {self.pocet_odpracovanych_let}, zakladni mzda {self.zakladni_mzda} Kc"
-
 
 if __name__ == "__main__":
     p1 = Programator("Alice", 40000)
