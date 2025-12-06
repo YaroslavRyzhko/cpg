@@ -25,7 +25,9 @@ class Zamestnanec(ABC):
 class Programator(Zamestnanec):
     def vypocitej_mzdu(self):
         bonus = 1000 * self.pocet_odpracovanych_let
-        return self.zakladni_mzda + bonus + (self.zakladni_mzda + bonus) * 0.1
+        navic = (self.zakladni_mzda + bonus) * 0.1
+        bonus += navic
+        return self.zakladni_mzda + bonus
     
     def __str__(self):
         return f"Programator {self.jmeno}, odpracovanych let {self.pocet_odpracovanych_let}, zakladni mzda {self.zakladni_mzda} Kc"
